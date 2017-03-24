@@ -1,0 +1,75 @@
+
+<section id="add-vacancy">
+		<div class="col-12 cf">
+			<form id="vac-form">
+				<div class="col-6 fl cf">
+					<input disabled name="vac-name" required="" type="text" value="" placeholder="Заголовок">
+					<select disabled id="vac-country" name="vac-country" required>
+						<option disabled selected hidden value="-1">Выберите страну</option>
+					</select>
+					<select disabled id="vac-city" name="vac-city" required>
+						<option disabled selected hidden value="-1">Выберите город</option>
+					</select>
+					<input disabled type="text" required="" placeholder="Специальность" value="" name="vac-spec">
+					<select disabled name="vac-category" required>
+						    <option value="0">Другое</option>
+    						<option value="1">Сельское хозяйство</option>
+    						<option value="2">Туризм</option>
+    						<option value="3">Рестораны, общепит</option>
+    						<option value="4">Маркетинг</option>
+    						<option value="5">Реклама, PR</option>
+    						<option value="6">Юриспруденция</option>
+    						<option value="7">Страхование</option>
+    						<option value="8">Спорт</option>
+    						<option value="9">Красота</option>
+    						<option value="10">Банки, Финансы</option>
+    						<option value="11">Бухгалтерия</option>
+    						<option value="12">Аудиторство</option>
+    						<option value="13">Образование</option>
+    						<option value="14">Дизайн</option>
+    						<option value="15">Искусство</option>
+    						<option value="16">Развлечения</option>
+    						<option value="17">Транспорт и Логистика</option>
+    						<option value="18">Медицина и Фармацевтика</option>
+    						<option value="19">IT и Телекоммуникации</option>
+    						<option value="20">Производство, промышленность</option>
+    						<option value="21">Строительство и Недвижимость</option>
+    						<option value="22">СМИ, Журналистика</option>
+    						<option value="23">Переводы</option>
+    						<option value="24">Торговля и Продажи</option>
+    						<option value="25">Охрана и Безопасность</option>
+    						<option value="26">Персонал для дома и офиса</option>
+					</select>
+				</div>
+				<div class="col-6 fr cf">
+					<div class="col-12">
+						<div class="vac-photo">
+							<img src="https://urbanconsulting.md/wp-content/uploads/2017/03/camera.jpg" alt="" />
+							<input disabled id="vac-photo" name="vac-photo" class="download-resume" accept="image/jpeg" type="file" placeholder="Фото" style="display:none;" />
+							<label for="vac-photo" class="download-resume" title="Загрузите ваше фото" style="cursor: pointer;">Загрузите фото</label>
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="checkbox">
+							<label>
+								<input disabled name="vac-qual" type="checkbox"  value="Квалифицированный" /> Квалифицированный
+							</label> \ 
+							<label>
+								<input disabled name="vac-unqual" value="Неквалифицированный" type="checkbox" /> Неквалифицированный
+							</label>
+						</div>
+					</div>
+				</div>
+				<div class="col-12 fl cf">
+					<textarea disabled name="vac-info" required placeholder="Дополнительная информация" cols="60" rows="5"></textarea>
+				</div>
+				<div class="col-12 fl cf">
+					<input disabled id="vac-update" class="btn-sm btn-save" name="submit" type="submit" value="Отправить" />
+				</div>
+			</form>
+		</div>
+</section>
+
+
+<script src="/adeon/adeon.js"></script>
+<script src="/adeon/add-vacancy/add-vacancy.js"></script>

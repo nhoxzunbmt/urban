@@ -1,0 +1,44 @@
+<a href="#" onclick="importStripePlans()" id="axisubs-import_from_stripe" class="page-title-action">Import from Stripe</a>
+<input type="hidden" name="site_url" value="{{ site_url }}" id="site_url"/>
+<script type="application/javascript">
+    if(typeof(axisubs) == 'undefined') {
+        var axisubs = {};
+    }
+    if(typeof(axisubs.jQuery) == 'undefined') {
+        axisubs.jQuery = jQuery.noConflict();
+    }
+
+    /**
+     * For import the stripe plans
+     * */
+    function importStripePlans(){
+        (function($){
+            $('.axisub-coupon_message').hide();
+            var data = {
+                action: 'axisubs_ajax',
+                view: 'Plan', task: 'app',
+                app: 'axisubs-app-payment-stripe',
+                apptask: 'importPlansFromStripe'}
+            $.ajax({
+                type: 'post',
+                url: $('#site_url').val()+'/wp-admin/admin-ajax.php',
+                dataType: 'json',
+                data: data,
+                cache: false,
+                async: false,
+                beforeSend: function () {
+                    $('#axisubs-import_from_stripe').html('Loading..');
+                },
+                success: function (json) {
+                    $('#axisubs-import_from_stripe').html('Import from Stripe');
+                    console.log(json);
+                    $('.axisubs-message-ajax').html(json['message']).show();
+                    location.reload();
+                },
+                error: function (xhr, ajaxOptions, thrownError) {
+                    //alert(thrownError + "\r\n" + xhr.statusText + "\r\n" + xhr.responseText);
+                }
+            });
+        })(axisubs.jQuery);
+    }
+</script>

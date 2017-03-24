@@ -1,0 +1,61 @@
+<section id="vacancyes" class="my-vacancyes cf">
+    <div class="wrapper">
+      <div class="col-3 ">
+        <div class="filter">
+          <form id ="vac-form">
+            <select id="vac-country">
+              <option disabled selected value="-1">Все страны</option>
+            </select>
+          
+            <select id="vac-city">
+              <option disabled selected value="-1">Все города</option>
+            </select>
+            <input id="vac-spec" type="text" placeholder="Специальность"></input> 
+          <select id="vac-category">
+				<option disabled selected value="-1">Все категории</option>
+                <option value="0">Сельское хозяйство</option>
+                <option value="1">Туризм</option>
+                <option value="2">Рестораны, общепит</option>
+                <option value="3">Маркетинг</option>
+                <option value="4">Реклама, PR</option>
+                <option value="5">Юриспруденция</option>
+                <option value="6">Страхование</option>
+                <option value="7">Спорт</option>
+                <option value="8">Красота</option>
+                <option value="9">Банки, Финансы</option>
+                <option value="10">Бухгалтерия</option>
+                <option value="11">Аудиторство</option>
+                <option value="12">Образование</option>
+                <option value="13">Дизайн</option>
+                <option value="14">Искусство</option>
+                <option value="15">Развлечения</option>
+                <option value="16">Транспорт и Логистика</option>
+                <option value="17">Медицина и Фармацевтика</option>
+                <option value="18">IT и Телекоммуникации</option>
+                <option value="19">Производство, промышленность</option>
+                <option value="20">Строительство и Недвижимость</option>
+                <option value="21">СМИ, Журналистика</option>
+                <option value="22">Переводы</option>
+                <option value="23">Торговля и Продажи</option>
+                <option value="24">Охрана и Безопасность</option>
+                <option value="25">Персонал для дома и офиса</option>
+				<option value="26">Другое</option>
+          </select>
+            <div class="group">
+              <input id="vac-qual" type="checkbox"><label for="">Квалифицированный</label>
+              <input id="vac-unqual" type="checkbox"><label for="">Неквалифицированный</label>
+            </div>
+            <input class="btn-vacancyes" type="submit" value="Искать"></button>
+          </form>
+        </div>
+      </div>
+      <div class="col-9 ">
+        <ul id="vac-append" class="cf">
+          <img src="/img/loading.svg" alt="" />
+        </ul>
+      </div>
+    </div>
+  </section>
+  
+  <script src="/adeon/adeon.js"></script>
+  <script src="/adeon/job-list/job-list.js"></script>

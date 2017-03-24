@@ -1,0 +1,19 @@
+<div class="axisubs-fields-content">
+    <div class="axisubs-fields-label">
+        <label for="axisub_plans">Subscription Plans
+        </label>
+    </div>
+    {% if plans|length > 0 %}
+    <select name="axisub_plans[]" class="widget-hot-topics" id="axisub_plans" multiple size="5">
+        {% set add_roles = '' %}
+        {% for key, plan in plans %}
+            {% set planMeta = plan['meta'] %}
+            {% set planPrefix = plan['ID']~'_'~plan['post_type']~'_' %}
+            <option value="{{ plan['ID'] }}" {% if plan['ID'] in selected_plans %} selected {% endif %}>{{ planMeta[planPrefix~'name'] }}</option>
+        {% endfor %}
+    </select>
+    <span class="axisubs_cr_help-text">Members subscribed to these Subscription plan(s) will be able to view this page.</span>
+    {% else %}
+        <span class="axisubs_cr_help-text">You do not have any active Subscription Plans yet. Please create them <a href="admin.php?page=plans-index&task=edit">Here</a>.</span>
+    {% endif %}
+</div>

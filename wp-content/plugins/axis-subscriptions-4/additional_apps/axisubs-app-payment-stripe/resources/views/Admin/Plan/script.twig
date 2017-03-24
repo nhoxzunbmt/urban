@@ -1,0 +1,51 @@
+<script type="application/javascript">
+    if(typeof(axisubs) == 'undefined') {
+        var axisubs = {};
+    }
+    if(typeof(axisubs.jQuery) == 'undefined') {
+        axisubs.jQuery = jQuery.noConflict();
+    }
+    {% if stripe == '1' %}
+        function disableEditForStripe(){
+            (function($){
+                var enableTagIds = ['axisub_plan_payment_plugins', 'axisub_plan_add_roles', 'axisub_plan_remove_roles', 'axisub_plan_image', 'axisub_plan_image_attachment_id'];
+                var enableTagNames = ['task', 'post_type', 'id'];
+//                $('#planForm .axisubs-fields input, #planForm .axisubs-fields select, #planForm .axisubs-fields textarea').attr('disabled', 'disabled');
+                $('#planForm #durations .axisubs-fields input, #planForm #durations .axisubs-fields select, #planForm #durations .axisubs-fields textarea').attr('disabled', 'disabled');
+                for (index = 0; index < enableTagIds.length; ++index) {
+                    $('#'+enableTagIds[index]).removeAttr('disabled');
+                }
+                for (index = 0; index < enableTagNames.length; ++index) {
+                    $('input[name="'+enableTagNames[index]+'"]').removeAttr('disabled');
+                }
+            })(axisubs.jQuery);
+        }
+        (function($){
+            $( document ).ready(function() {
+                disableEditForStripe();
+                $('#planForm .axisubs-fields input, #planForm .axisubs-fields select, #planForm .axisubs-fields textarea').change(function() {
+                    disableEditForStripe();
+                });
+            });
+        })(axisubs.jQuery);
+    {% else %}
+        function disableStripePayment(){
+            (function($){
+                var plan_type = $('select[name="axisubs[plans][type]"]').val();
+                if(plan_type == 'recurring' || plan_type == 'recurring_with_trial'){
+                    $('select#axisub_plan_payment_plugins option[value="axisubs-app-payment-stripe"]').removeAttr('selected').attr('disabled', 'disabled');
+                } else {
+                    $('select#axisub_plan_payment_plugins option[value="axisubs-app-payment-stripe"]').removeAttr('disabled');
+                }
+            })(axisubs.jQuery);
+        }
+        (function($){
+            $( document ).ready(function() {
+                disableStripePayment();
+                $('select[name="axisubs[plans][type]"]').change(function() {
+                    disableStripePayment();
+                });
+            });
+        })(axisubs.jQuery);
+    {% endif %}
+</script>

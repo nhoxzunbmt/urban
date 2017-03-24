@@ -1,0 +1,57 @@
+<section id="jkh" class="profile">
+	<div class="wrapper">
+		<div id="cv-status0" class="notification pending bs" style="display: none;">Ваша заявка на рассмотрении.</div>
+		<div id="cv-status1" class="notification successfull bs" style="display: none;">Ваша заявка одобрена.</div>
+		<div id="cv-status2" class="notification ignored bs" style="display: none;">Ваша заявка отклонена.</div>
+		<div class="profile__about cf">
+			<form id="cv-form" class="info-profile">
+				<div class="col-4">
+					<div class="photo-profile" title="загрузите ваше фото">
+						<img src="/img/loading.svg" alt="Loading.." />
+					</div>
+					<input id="cv-photo" class="download-resume" style="display: none;" type="file" name="cv-photo" accept="image/jpeg" placeholder="Загрузить фото" disabled />
+					<label class="download-resume" style="cursor: pointer;" for="cv-photo" title="Загрузить фото" >Загрузите фото</label>
+				</div>
+				<div class="col-8">
+					<h2>ПРИВЕТ, Я <input type="text" name="cv-name" maxlength="24" value="" placeholder="ROBERT SMITH" required disabled /></h2>
+					<h3><input type="text" name="cv-spec" maxlength="64" value="" placeholder="Великий кузнец" required disabled /></h3>
+					<textarea style="resize: none;" name="cv-info" cols="60" rows="5" maxlength="250" placeholder="25 лет работаю в кузне, в Новокузнецке. Делаю заборы на заказ, а также в свободное время вышиваю." required disabled ></textarea>
+					<div class="col-12 ul-info cf">
+						<div class="col-6">
+							<div class="info-wrapper">
+								<ul>
+									<li><label for="">Возраст</label><input type="number" name="cv-age" max="70" min="16" value="" placeholder="26" required disabled /></li>
+									<li><label for="">Адрес</label><input type="text" name="cv-address" maxlength="48" value="" placeholder="London, Earth, BE 45" required disabled /></li>
+									<li><label for="">Email</label><input type="email" name="cv-email" maxlength="255" value="" placeholder="robertsmith@gmail.com" required disabled /></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="info-wrapper">
+								<ul>
+									<li><label for="">Страна</label><select id="cv-country" name="cv-country" required disabled>
+												<option value="-1" hidden selected disabled >Выберите страну</option>
+											</select>
+										
+									</li>
+									<li><label for="">Город</label><select id="cv-city" name="cv-city" required disabled>
+												<option value="-1" hidden selected disabled >Выберите город</option>
+											</select>
+										
+									</li>
+									<li><label for="">Телефон</label><input type="text" name="cv-phone" maxlength="22" value="" placeholder="(+373) 22 242 686" required disabled />
+										
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<input id="cv-update" class="btn-sm btn-save" type="submit" name="submit" value="Отправить" placeholder="Отправить" disabled />
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<script src="/adeon/adeon.js"></script>
+<script src="/adeon/cv/cv.js"></script>

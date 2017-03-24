@@ -1,0 +1,7 @@
+[10-Mar-2017 11:15:04 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:15:19 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:15:25 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:15:31 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:16:22 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:16:49 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72
+[10-Mar-2017 11:17:04 UTC] PHP Fatal error:  Call to undefined function Illuminate\Support\mb_strpos() in /home/urbancon/public_html/wp-content/plugins/axis-subscriptions-1/vendor/illuminate/support/Str.php on line 72

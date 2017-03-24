@@ -1,0 +1,35 @@
+{% set planPrefix = vars.plan['ID']~'_'~vars.plan['post_type']~'_' %}
+{% if vars.image != '' %}
+<img src="{{ vars.image }}"/>
+{% endif %}
+<form action='{{ vars.return_url }}' id="stripe_payment_form" method="post">
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="{{ vars.publishable_key }}"
+            data-description="{{ vars.plan['meta'][planPrefix~'name'] }}"
+            data-amount="{{ vars.total }}"
+            data-locale="auto"></script>
+</form>
+<style>
+    .axisubs-plan-payment-i-block{
+        display: none;
+    }
+</style>
+<script type="application/javascript">
+    if(typeof(axisubs) == 'undefined') {
+        var axisubs = {};
+    }
+    if(typeof(axisubs.jQuery) == 'undefined') {
+        axisubs.jQuery = jQuery.noConflict();
+    }
+
+//    function submitAxisubsPayment(){
+        (function($){
+            $( document ).ready(function() {
+                $('form#stripe_payment_form').submit(function(){
+                    alert("submit");
+                    return false;
+                });
+            });
+        })(axisubs.jQuery);
+//    }
+</script>

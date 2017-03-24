@@ -1,0 +1,268 @@
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11 {
+
+  float: left;
+
+  -webkit-box-sizing: border-box;
+
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+
+}
+
+
+
+.col-1 { width: 8.333333333333332%;  }
+
+.col-2 { width: 16.666666666666664%; }
+
+.col-3 { width: 25%; }
+
+.col-4 { width: 33.33333333333333%;  }
+
+.col-5 { width: 41.66666666666667%;  }
+
+.col-6 { width: 50%; }
+
+.col-7 { width: 58.333333333333336%; }
+
+.col-8 { width: 66.66666666666666%;  }
+
+.col-9 { width: 75%; }
+
+.col-10{ width: 83.33333333333334%;  }
+
+.col-11{ width: 91.66666666666666%;  }
+
+.col-12{ width: 100%;}
+
+
+
+.cf:before,
+
+.cf:after {
+
+  content: "";
+
+  display: table;
+
+}
+
+.cf:after {
+
+  clear: both;
+
+}
+
+
+
+.ac {
+
+  display: block;
+
+  margin: 0 auto;
+
+}
+
+.fl {
+
+    float: left;
+
+}
+
+.fr {
+
+    float: right;
+
+}
+
+.page-title {
+
+    background: #FFF;
+
+	/*box-shadow: 0 5px 15px rgba(0,0,0,.3);*/
+	border: 1px #E5E5E5 solid;
+    padding: 5px 50px;
+
+    margin: 10px 10px 15px 0;
+
+    /*border-radius: 3px;*/
+
+}
+
+.page-title h2 {
+
+    line-height: 0px;
+
+}
+
+.no-photo {
+
+    text-align: center;
+
+    border: 2px solid red;
+
+    display: block;
+
+    width: 50%;
+
+    margin: 0 auto;
+
+    padding: 10px;
+
+}
+
+.cv-view-photo img {
+
+    width: 200px;
+
+    height: 200px;
+
+    border: 15px solid #FFF;
+
+    box-shadow: 0 0px 15px rgba(0,0,0,0.5);
+
+    float: left;
+
+    margin-right: 20px;
+
+}
+
+.cv-view {
+
+    background: #FFF;
+
+    margin-bottom: 50px;
+
+    margin-right: 10px;
+
+    padding: 15px;
+
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+
+    border-radius: 3px;
+
+}
+
+.cv-view-photo .wrapper {
+
+    width: 200px;
+
+    height: 200px;
+
+    border: 15px solid #FFF;
+
+    box-shadow: 0 0 15px;
+
+    background-size: cover;
+
+    margin: 0 auto;
+
+}
+
+.cv-view-field:nth-child(2n-1) {
+
+    background: #ececec;
+
+}
+
+.cv-view-field p {
+
+    margin: 5px;
+
+    padding: 5px;
+
+}
+
+.cv-view-buttons input[type="submit"] {
+
+    padding: 10px;
+
+    text-decoration: none;
+
+    transition: .2s all ease-in-out;
+
+    display: block;
+
+    color: #000;
+
+    background: #eee;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+width:100%;
+
+}
+
+.btn-agree {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin: 10px 20px;
+
+    padding: 0 20px;
+
+}
+
+.btn-disagree {
+
+    width: 100%;
+
+    text-align: center;
+
+    margin: 0px 20px;
+
+    padding: 0 20px;
+
+}
+
+.cv-view-buttons {
+
+    display: flex;
+
+    justify-content: space-around;
+
+    flex-wrap: wrap;
+    float:right;
+    max-width: 260px;
+position: relative;
+    bottom: 60px;
+
+}
+
+.cv-view-buttons .btn-agree input[type="submit"] {
+
+    background: rgba(14, 158, 14, .5);
+
+}
+
+.cv-view-buttons .btn-agree input[type="submit"]:hover {
+
+    color: #FFF;
+
+    background: rgba(14, 158, 14, 1);
+
+}
+
+.cv-view-buttons .btn-disagree input[type="submit"] {
+
+    background: rgba(156, 8, 8, .5);
+
+}
+
+.cv-view-buttons .btn-disagree input[type="submit"]:hover {
+
+    color: #FFF;
+
+    background: rgba(156, 8, 8, 1);
+
+}
+
+.comment form textarea {
+
+    resize: none;
+
+}
